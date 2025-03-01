@@ -1,8 +1,12 @@
-import { Button } from "@/components/ui/button";
+
 import React from "react";
 
 const Home = () => {
-  return <Button>this is a button</Button>;
+  return (
+    <div>
+      <h1>Hello</h1>
+    </div>
+  )
 };
 
 export default Home;
