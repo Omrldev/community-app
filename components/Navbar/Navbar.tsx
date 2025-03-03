@@ -1,12 +1,12 @@
+import { ROUTE } from "@/constants/route";
 import Image from "next/image";
 import Link from "next/link";
-import React, { ReactNode } from "react";
-import { ROUTE } from "../../constants/route";
+import React from "react";
 
-const AuthLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
+const Navbar = () => {
   return (
-    <main className="w-full min-h-screen flex justify-center items-center">
-      <div className="min-w-[520px] shadow-md p-7 rounded-xl">
+    <header className="w-full min-h-16 fixed top-0 left-0 bg-white shadow-md">
+      <nav className="w-full min-h-16 flex justify-between items-center px-3">
         <Link href={ROUTE.HOME} className="flex items-center gap-1.5">
           <Image
             src={"/assets/images/site-logo.svg"}
@@ -19,11 +19,9 @@ const AuthLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
             <span className="text-primary">Logo</span>
           </p>
         </Link>
-
-        {children}
-      </div>
-    </main>
+      </nav>
+    </header>
   );
 };
 
-export default AuthLayout;
+export default Navbar;

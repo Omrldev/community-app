@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   description: "A community to find answers to your questions",
 };
 
-export default function RootLayout({
+const Layout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en">
       <body
@@ -32,3 +32,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default Layout

@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import { ROUTE } from "@/app/constants/route";
+import { ROUTE } from "@/constants/route";
 
 interface AuthFormProps<T extends FieldValues> {
   formType: "SIGN_IN" | "SIGN_UP";
@@ -49,7 +49,9 @@ const AuthForm = <T extends FieldValues>({
         className="space-y-8 mt-7"
       >
         {formType === "SIGN_UP" ? (
-          <h1 className="font-semibold text-2xl text-primary">Create an account</h1>
+          <h1 className="font-semibold text-2xl text-primary">
+            Create an account
+          </h1>
         ) : (
           ""
         )}
@@ -82,7 +84,10 @@ const AuthForm = <T extends FieldValues>({
           />
         ))}
 
-        <Button type="submit" className="w-full bg-primary text-xl h-12 cursor-pointer">
+        <Button
+          type="submit"
+          className="w-full bg-primary text-xl h-12 cursor-pointer"
+        >
           {buttonText}
         </Button>
 
