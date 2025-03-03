@@ -2,23 +2,26 @@ import { ROUTE } from "@/constants/route";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import MobileNavigation from "./MobileNavigation";
 
 const Navbar = () => {
   return (
-    <header className="w-full min-h-16 fixed top-0 left-0 bg-white shadow-md">
+    <header className="w-full min-h-16 fixed top-0 left-0 z-50 bg-white shadow-md">
       <nav className="w-full min-h-16 flex justify-between items-center px-3">
         <Link href={ROUTE.HOME} className="flex items-center gap-1.5">
           <Image
             src={"/assets/images/site-logo.svg"}
             alt="site logo"
-            width={28}
-            height={28}
+            width={32}
+            height={32}
           />
-          <p className="text-2xl font-semibold">
+          <p className="text-2xl font-semibold max-md:hidden">
             Site
             <span className="text-primary">Logo</span>
           </p>
         </Link>
+
+        <MobileNavigation />
       </nav>
     </header>
   );
