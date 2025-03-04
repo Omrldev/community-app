@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode } from "react";
 import { ROUTE } from "../../constants/route";
+import { imagesLinks } from "@/constants";
 
 const AuthLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
@@ -9,7 +10,7 @@ const AuthLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
       <div className="min-w-[520px] shadow-md p-7 rounded-xl">
         <Link href={ROUTE.HOME} className="flex items-center gap-1.5">
           <Image
-            src={"/assets/images/site-logo.svg"}
+            src={imagesLinks.LOGO}
             alt="site logo"
             width={28}
             height={28}

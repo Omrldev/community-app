@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import MobileNavigation from "./MobileNavigation";
+import { imagesLinks } from "@/constants";
 
 const Navbar = () => {
   return (
@@ -10,7 +11,7 @@ const Navbar = () => {
       <nav className="w-full min-h-16 flex justify-between items-center px-3">
         <Link href={ROUTE.HOME} className="flex items-center gap-1.5">
           <Image
-            src={"/assets/images/site-logo.svg"}
+            src={imagesLinks.LOGO}
             alt="site logo"
             width={32}
             height={32}
