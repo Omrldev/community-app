@@ -3,10 +3,12 @@ import React, { ReactNode } from "react";
 
 const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
-    <main>
+    <main className="relative">
         <Navbar />
         
-        {children}
+        <div className="max-w-5xl">
+          {children}
+        </div>
     </main>
   )
 };

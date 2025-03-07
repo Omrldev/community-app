@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "A community to find answers to your questions",
 };
 
-const Layout = ({
+const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -33,4 +33,4 @@ const Layout = ({
   );
 }
 
-export default Layout
+export default RootLayout
